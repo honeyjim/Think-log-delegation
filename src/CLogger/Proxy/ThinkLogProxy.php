@@ -5,10 +5,8 @@ declare (strict_types = 1);
 namespace Think\Clogger\Proxy;
 
 use Think\Clogger\CLogger;
-use think\helper\Str;
 use think\Container;
 use think\Log as ThinkLog;
-use think\exception\FuncNotFoundException;
 
 class ThinkLogProxy extends ThinkLog
 {
