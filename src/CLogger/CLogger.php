@@ -108,9 +108,8 @@ class CLogger implements LogHandlerInterface
         switch ($this->config['type'])
         {
             case 'daily':
-            case 'sql':
                 return [new IntrospecationProcessor($this->getLevelInt($this->level), ['CLogger', 'Think', 'think'])];
-            default:
+            case 'sql':
                 return [];
         }
     }
