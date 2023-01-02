@@ -4,9 +4,9 @@ declare (strict_types = 1);
 
 namespace Think\Clogger;
 
-use app\common\CLogger\Handlers\RotationFileHandler;
-use app\common\CLogger\Processors\IntrospecationProcessor;
-use app\common\CLogger\Formatters\JsonFormatter;
+use Think\Clogger\Handlers\RotationFileHandler;
+use Think\Clogger\Processors\IntrospecationProcessor;
+use Think\Clogger\Formatters\JsonFormatter;
 use think\contract\LogHandlerInterface;
 use Monolog\Logger as Monologger;
 

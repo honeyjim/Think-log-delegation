@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Processors;
+namespace Think\Clogger\Processors;
 
 use Monolog\Processor\IntrospectionProcessor;
 

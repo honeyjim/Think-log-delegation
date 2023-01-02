@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Proxy;
+namespace Think\Clogger\Proxy;
 
 use think\log\Channel as ThinkChannel;
 

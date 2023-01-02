@@ -2,9 +2,9 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Facade;
+namespace Think\Clogger\Facade;
 
-use app\common\CLogger\Proxy\ThinkLogProxy;
+use Think\Clogger\Proxy\ThinkLogProxy;
 use think\Facade;
 
 class LogFacade extends Facade

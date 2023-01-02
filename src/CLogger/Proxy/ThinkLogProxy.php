@@ -2,9 +2,9 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Proxy;
+namespace Think\Clogger\Proxy;
 
-use app\common\CLogger\CLogger;
+use Think\Clogger\CLogger;
 use think\helper\Str;
 use think\Container;
 use think\Log as ThinkLog;

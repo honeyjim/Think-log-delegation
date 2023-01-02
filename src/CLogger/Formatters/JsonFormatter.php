@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Formatters;
+namespace Think\Clogger\Formatters;
 
 use think\Container;
 use Monolog\Formatter\JsonFormatter as MonologJsonFormatter;

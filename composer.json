@@ -12,6 +12,6 @@
     "minimum-stability": "stable",
     "require": {},
     "autoload": {
-        "psr-4": { "Think\\Clogger\\": "src" }
+        "psr-4": { "Think\\Clogger\\": "src/CLogger/" }
     }   
 }

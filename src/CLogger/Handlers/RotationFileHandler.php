@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger\Handlers;
+namespace Think\Clogger\Handlers;
 
 use Monolog\Handler\RotatingFileHandler as MonologRotationFileHandler;
 
