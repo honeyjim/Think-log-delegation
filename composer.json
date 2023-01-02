@@ -1,7 +1,10 @@
 {
-    "name": "hh/think-clogger",
+    "name": "think/clogger",
     "description": "Delegate log to monolog for ThinkPHP6",
     "type": "library",
+    "require": {
+        "monolog/monolog": "2.8.0"
+    },
     "license": "MIT",
     "authors": [
         {
@@ -9,9 +12,5 @@
             "email": "honeyjimcui@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
-    "autoload": {
-        "psr-4": {"Think\\Clogger\\": "src/CLogger" }
-    }
+    "minimum-stability": "stable"
 }
