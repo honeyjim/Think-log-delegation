@@ -96,8 +96,10 @@ class CLogger implements LogHandlerInterface
         switch ($this->config['type'])
         {
             case 'daily':
+            case 'sql':
                 return [new RotationFileHandler($this->config['path'], $this->config['days'])];
             default:
+                return [];
         }
     }
 
@@ -106,8 +108,10 @@ class CLogger implements LogHandlerInterface
         switch ($this->config['type'])
         {
             case 'daily':
+            case 'sql':
                 return [new IntrospecationProcessor($this->getLevelInt($this->level), ['CLogger', 'Think', 'think'])];
             default:
+                return [];
         }
     }
 
@@ -117,6 +121,8 @@ class CLogger implements LogHandlerInterface
         {
             case 'daily':
                 return [new JsonFormatter()];
+            case 'sql':
+                return [];
             default:
         }
     }
