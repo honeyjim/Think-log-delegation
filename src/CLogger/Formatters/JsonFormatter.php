@@ -16,6 +16,7 @@ class JsonFormatter extends MonologJsonFormatter
         $method = Container::getInstance()->make('request')->method();
         $parameters = Container::getInstance()->make('request')->param();
         $ip = Container::getInstance()->make('request')->ip();
+        $traceId = Container::getInstance()->make('request')->header('trace_id');
         $serverAddr = isset($_SERVER['SERVER_ADDR']) ? (string)$_SERVER['SERVER_ADDR'] : '';
         $serverServerName = isset($_SERVER['SERVER_NAME']) ? (string)$_SERVER['SERVER_NAME'] : '';
         $httpReferer = isset($_SERVER['HTTP_REFERER']) ? (string)$_SERVER['HTTP_REFERER'] : '';
@@ -30,6 +31,7 @@ class JsonFormatter extends MonologJsonFormatter
             'context' => json_encode($record['context'], JSON_UNESCAPED_UNICODE),
             'duration' => ($duration / 1000).' ms',
             'clientIp' => $ip,
+            'traceId' => $traceId,
             'serverAddress' => $serverAddr,
             'serverName' => $serverServerName,
             'referer' => $httpReferer,
