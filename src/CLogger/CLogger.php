@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-namespace app\common\CLogger;
+namespace Think\Clogger;
 
 use app\common\CLogger\Handlers\RotationFileHandler;
 use app\common\CLogger\Processors\IntrospecationProcessor;
