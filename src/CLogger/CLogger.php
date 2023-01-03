@@ -108,6 +108,7 @@ class CLogger implements LogHandlerInterface
         {
             case 'daily':
                 return [new IntrospecationProcessor($this->getLevelInt($this->level), ['CLogger', 'Think', 'think'])];
+            default:
                 return [];
         }
     }
@@ -119,6 +120,7 @@ class CLogger implements LogHandlerInterface
             case 'daily':
                 return [new JsonFormatter()];
             default:
+                return [];
         }
     }
 

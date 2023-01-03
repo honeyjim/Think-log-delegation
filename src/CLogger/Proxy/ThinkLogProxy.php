@@ -5,7 +5,6 @@ declare (strict_types = 1);
 namespace Think\Clogger\Proxy;
 
 use Think\Clogger\CLogger;
-use think\Container;
 use think\Log as ThinkLog;
 
 class ThinkLogProxy extends ThinkLog
