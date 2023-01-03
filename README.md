@@ -16,11 +16,5 @@ Log::channel('main')->debug('test info', [
             'type' => 'daily',
             'path' => think\Container::getInstance()->make('app')->getRuntimePath().'logs'.DIRECTORY_SEPARATOR.'main.log',
             'days' => 180,
-        ],
-
-'sql' => [
-            'type' => 'sql',
-            'path' => think\Container::getInstance()->make('app')->getRuntimePath().'logs'.DIRECTORY_SEPARATOR.'sql.log',
-            'days' => 180,
-        ],
+        ]
 ```
