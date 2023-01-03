@@ -15,5 +15,7 @@ class ThinkChannelProxy extends ThinkChannel
         $this->logger->setContext($context);
 
         $this->logger->save([$msg]);
+
+        return $this;
     }
 }

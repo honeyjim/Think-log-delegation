@@ -19,9 +19,7 @@ class ThinkLogProxy extends ThinkLog
         $config = $params[0];
         $config['name'] = $name;
 
-        $driver = Container::getInstance()->make(CLogger::class, [
-            'config' => $config,
-        ]);
+        $driver = new CLogger($config);
 
         return new ThinkChannelProxy($name, $driver, [], false, null);
     }
