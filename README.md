@@ -18,3 +18,26 @@ Log::channel('main')->debug('test info', [
             'days' => 180,
         ]
 ```
+* Sql log
+```php
+Db::listen(function ($sql, $time, $master) {
+    $dbLogger = new Logger('db.logger');
+    $handler = new RotatingFileHandler(Container::getInstance()->make('app')->getRuntimePath().'logs'.DIRECTORY_SEPARATOR.'sql.log', 180);
+    $dbLogger->pushHandler($handler);
+
+    if (0 === strpos($sql, 'CONNECT:')) {
+        $dbLogger->info($sql);
+        return;
+    }
+
+    // 记录SQL
+    if (is_bool($master)) {
+        // 分布式记录当前操作的主从
+        $master = $master ? 'master|' : 'slave|';
+    } else {
+        $master = '';
+    }
+
+    $dbLogger->info($sql . ' [ ' . $master . 'RunTime:' . $time . 's ]');
+});
+```
