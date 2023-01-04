@@ -30,9 +30,7 @@ Db::listen(function ($sql, $time, $master) {
         return;
     }
 
-    // 记录SQL
     if (is_bool($master)) {
-        // 分布式记录当前操作的主从
         $master = $master ? 'master|' : 'slave|';
     } else {
         $master = '';
