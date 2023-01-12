@@ -21,6 +21,7 @@ class JsonFormatter extends MonologJsonFormatter
         $serverServerName = isset($_SERVER['SERVER_NAME']) ? (string)$_SERVER['SERVER_NAME'] : '';
         $httpReferer = isset($_SERVER['HTTP_REFERER']) ? (string)$_SERVER['HTTP_REFERER'] : '';
         $token = isset($_SERVER['HTTP_AUTHORIZATION']) ? (string)$_SERVER['HTTP_AUTHORIZATION'] : '';
+        $device = Container::getInstance()->make('request')->header('byplatform') ?? 'unknown';
 
         $newRecord = [
             'project_name' => '',
@@ -39,6 +40,7 @@ class JsonFormatter extends MonologJsonFormatter
             'method' => $method,
             'parameters' => $parameters,
             'token' => $token,
+            'device' => $device,
         ];
 
         if (isset($record['extra'])) {
